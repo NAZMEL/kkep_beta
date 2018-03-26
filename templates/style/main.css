@@ -1,0 +1,957 @@
+body{background: rgb(140, 250, 233);} /*#B9D4DF*/
+
+#soc_net { 
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 350px;
+    left: 180px;
+    top: 230px;
+    padding: 10px;
+}
+
+#soc {
+    width: 40px; 
+    height: 40px;
+    margin-top: 30px;
+}
+
+#news{
+    position: relative;
+    margin-top: 10px;
+    
+    padding-left: 15px; 
+    
+    padding-right: 15px;
+    
+    /*height: 650px;*/
+    width: 980px;
+    
+    background: #F0FFFF;
+    padding-top: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#new{
+
+    margin-top: 10px;
+    
+    padding-left: 15px; 
+    
+    padding-right: 15px;
+    width: 980px;
+    
+    background: #F0FFFF;
+    padding-top: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#Date{
+    float: right;
+    position: relative;
+    margin-right: 20px;
+/*    margin-left: 760px;*/
+    color: grey;
+}
+
+#Date:hover{
+    cursor: pointer;
+}
+
+#like:hover, #coment:hover, #view:hover{
+    cursor: pointer;
+    
+}
+
+/*Титульний блок*/
+#div_icon{
+    position: relative;
+	background: #03bbfe; 
+	border-radius: 20px/25px;
+	height: 100px;
+	width: 1270px;
+	
+      /*стиль рамки блока*/
+	border-left-style: ridge;
+	border-right-style: ridge;
+	border-bottom-style: ridge;
+	
+	left: 250px;
+	
+    padding-top: 10px;        /*відступ від верхньої межі блока до даних*/
+	padding-left: 30px;       /*відступ від лівої межі блока до даних*/
+	padding-right: 30px;      /*відступ від правої межі блока до даних*/
+	padding-bottom: 20px;     /*відступ від нижньої межі блока до даних*/
+
+    line-height: 0.5cm;
+}
+#img_gerb{
+    position: static;
+	margin-left: 50px;
+	float: left;
+}
+#kkepit{
+	color: black;
+	font-size: 2.1em;
+	font-weight: bold;
+    position: static;
+	/*position: relative;щоб при згортанні вікна не змінювалось*/
+	padding-left: 60mm;
+	padding-top: 5mm;
+	text-align: center;
+}
+
+a{
+	text-decoration: none;
+     color: black;
+}
+a:hover{
+    color: grey;
+}
+a#formm{
+    color:darkgrey;
+}
+
+a#formm:hover{
+    color: black;
+}
+
+/*Main menu*/
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/*outside*/
+
+div#main_menu {
+    margin-top: 15px;
+    margin-left: -55px;
+    position: relative;
+    width: 1300;
+    
+}
+div.side_1{
+	position: absolute;
+	text-align: center;
+	left: 308px;
+	width: 182px;
+}
+div.side_2{
+	position: absolute;
+	text-align: center;
+	left: 490px;
+	width: 180px;
+}
+div.side_3{
+	position: absolute;
+	text-align: center;
+	left: 670px;
+	width: 180px;
+}
+div.side_4{
+	position: absolute;
+	text-align: center;
+	left: 850px;
+	width: 180px;
+}
+div.side_5{
+	position: absolute;
+	text-align: center;
+	left: 1030px;
+	width: 180px;
+}
+div.side_6{
+	position: absolute;
+	text-align: center;
+	left: 1210px;
+	width: 173px;
+}
+div.side_7{
+    position: absolute;
+	padding-left: 20px;
+	left: 1380px;
+	width: 240px;
+    border-radius: 0 10px 0 0;
+    height: 61px;
+	background: #00ccff;
+	display: block;
+}
+div.side_7 input[type=search]{
+    
+    /*background-image: url('images/search1.png');
+    background-position: 7px 7px;
+    background-position: right;
+    background-repeat: no-repeat;   /*щоб не було таких багато знаків*/
+    width: 180px;
+    font-size: 14px; 
+    height: 30px; 
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+
+
+input[type=search]:focus, input[type=email]:focus, input[type=password]:focus, input[type="text"]:focus{
+    background-color: lightgoldenrodyellow;
+}
+
+button{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-left: -2px;
+    margin-top: 15px;
+}
+
+
+
+ul.menu a{
+	color: black;
+	background: #00ccff;
+	padding: 1px;
+	
+	display: block;
+	border-bottom: 1px solid #666;
+	transition: 0.5s;
+}
+
+ul.menu a:hover{
+	background-color: #C1F8FF;
+    font-size: 17px;
+    
+}
+
+ul.menu li:last-child a, .menu li .menu_drop li:last-child a{
+	border-bottom: 0;
+}
+
+ul.menu li .menu_drop li a{
+	border-bottom: 1px inset #297CF9;
+    border-radius: 5px 5px 5px 5px;
+}
+
+
+                                                    /*Випливаючі меню*/
+
+li.menu_list{
+	position: relative;
+}
+
+li.menu_list_2{
+	position: relative;
+}
+
+ul.menu_drop{
+	position: absolute;
+	width: 100%;
+	top: -9999em;
+	opacity: 0;/*Ховає блоки*/
+	transition: 0.5s opacity;
+    z-index: 1;/*пріоритет показу, передній фон, над усіма*/
+}
+
+ul.menu_drop_2{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	margin-left: 100%;
+}
+
+li.menu_list:hover .menu_drop{
+	opacity: 1;
+	top: 3.8em;
+    
+}
+
+li.menu_list:hover .menu_drop_2{
+	opacity: 0;
+}
+
+li.menu_list_2:hover .menu_drop_2{
+	opacity: 1;
+}
+
+
+
+                                                        /*Головний блок*/
+#golovna{
+    display: block;
+    position: static;
+	border-style: ridge;
+    background: #E0FFFF;
+	width: 1300px;
+/*	height: 7650px;*/
+    padding: 15px;
+	
+	margin-left: 250px;      /*відступ від межі екрана з-ліва*/
+	margin-top: 75px;
+   
+}
+
+div.auth_frame{
+    position: absolute;
+    width: 275px;
+    height: 260px;
+    margin-left: 1025px;
+    margin-bottom:20px;
+    background: #F0FFFF;
+    padding-top: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+p.auth {
+    line-height: 1px; 
+    font-size: 20px; 
+    text-align: center;
+}
+p.auth :hover{
+   cursor: pointer;
+}
+
+input[type="email"]{
+    width: 200px; height: 20px; border-radius: 3px 3px 3px 3px;
+}
+
+input[type="password"]{
+    width: 200px; height: 20px; border-radius: 3px 3px 3px 3px;
+}
+
+input[type="submit"]{
+    margin-left: 60px; height: 30px; width: 70px; cursor: pointer; background: #41D6FF; font-size: 15px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+input[type="submit"]:hover, input[type="reset"]:hover{
+    background-color: #B9E6FF;
+}
+
+input[type="reset"]{
+   margin-left: 10px; height: 30px; width: 70px; cursor: pointer; background: #41D6FF; font-size: 15px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+input[type="text"]{
+    width: 200px; height: 20px; border-radius: 3px 3px 3px 3px;
+}
+a.form1{
+    font-variant: normal; 
+    font-size: 14px; 
+    text-decoration: underline;
+    color:blue;
+}
+
+/*div.main{
+    position: static;
+    background: #F0FFFF;
+    margin-top: -200px;
+    margin-left: 10px;
+    
+    width: 990px;
+    height: 3500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}*/
+
+div.img_move{
+    position: static;
+    margin-top: -15px;
+    width: 990px;
+    /*border-bottom: 1px solid black;*/
+    padding: 5px;
+    background: #FFC7CD;
+/*    background: #F0FFFF;*/
+   
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+ /*hjghhhhhhhhhhhhhhhhhhhhhhhhh jkjjjjjjjjjjjjjjjjjjjjjjjjjjj*/
+#effect_img_move {
+    position: absolute;
+    margin-top: -505px;
+    margin-left: 55px;
+    opacity: 1;
+    width: 800px;
+    height: 500px;
+    
+}
+.css-image-move2 {
+    position: absolute;
+    margin-top: -535px;
+    margin-left: 50px;
+    opacity: 1;
+    width: 800px;
+    height: 500px;
+}                                                       /* Standart, for Internet Explorer*/
+.css-image-move {                                               /*Виклик спецефекату появи картинки*/
+    animation-name: image_move;
+    animation-duration: 2s;
+}
+@keyframes image_move {                                         /*Спецефект появи картинки*/
+    from {opacity: 1; background: rgba(0, 0, 0, 1);}
+    /*25% { opacity: 1; background: rgba(65, 65, 65, 0.8);}
+    50% {opacity: 1; background: rgba(116, 116, 116, 0.6);}*/
+    to { background: rgba(255, 255, 255, 0.0);}
+}
+
+
+                                                        /* For Ghrome, Opera, Safari*/
+.css-image-move {                                               /*Виклик спецефекату появи картинки*/
+    -webkit-animation-name: image_move;
+    -webkit-animation-duration: 2s;
+}
+@-webkit-keyframes image_move {                                         /*Спецефект появи картинки*/
+    from {opacity: 1; background: rgba(0, 0, 0, 1);}
+    /*25% { opacity: 1; background: rgba(65, 65, 65, 0.8);}
+    50% {opacity: 1; background: rgba(116, 116, 116, 0.6);}*/
+    to { background: rgba(255, 255, 255, 0.0);}
+}
+
+
+                                                /* For Firebox*/
+.css-image-move {                                               /*Виклик спецефекату появи картинки*/
+    -moz-animation-name: image_move;
+    -moz-animation-duration: 2s;
+}
+    
+@-moz-keyframes image_move {                                         /*Спецефект появи картинки*/
+    from {opacity: 1; background: rgba(0, 0, 0, 1);}
+    /*25% { opacity: 1; background: rgba(65, 65, 65, 0.8);}
+    50% {opacity: 1; background: rgba(116, 116, 116, 0.6);}*/
+    to { background: rgba(255, 255, 255, 0.0);}
+}
+
+
+div.frame_2{
+    position: absolute;
+    width: 275px;
+    height: 350px;
+    margin-top: 280px;
+    margin-left: 1025px;
+    background: #F0FFFF;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.frame_3{
+   
+    position: absolute;
+    width: 275px;
+    height: 300px;
+    margin-left: 1025px;
+     margin-top: 1050px;
+    background: #F0FFFF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.frame_4{
+    position: absolute;
+    width: 275px;
+    height: 336px;
+    margin-left: 1025px;
+     margin-top: 650px;
+    background: #F0FFFF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+
+                                                                        /*Нижній фрагмент сторінки*/
+div.bottom{
+    position: relative;
+    width: 1340px;
+    background: #00ccff;
+    left: 250px;
+    top: 20px;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 17px;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+table.table_2{
+	width: 1307px;
+	border: 2px;
+    line-height: 2mm;   /*відступ між рядками*/
+}
+td.td_2_1{
+	width: 500px;
+    border-right: 1.5px solid grey;
+    
+}
+td.td_2_2{
+	width: 450px;
+    border-right: 1.5px solid grey;
+}
+
+
+
+
+
+
+/*For JavaScript*/
+                                                /* Формат зображень при їх збільшенні*/
+.css-image{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -5%;
+    margin-top: -5%;
+    transform: scale(1.5,1.5);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+                                                /* Формат зображень при їх поверненні до попередньої форми*/
+.css-image2{
+    transform: scale(1,1);
+}
+
+                                                /* Background при збільшенні зображень*/
+#grey_content {
+    display: none;
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(116, 116, 116, 0.5);
+}
+  
+
+
+#koment:hover {
+/*    text-decoration-style: dashed;*/
+   text-decoration:underline;
+
+  
+   /*  text-decoration: underline;
+    text-decoration-style: dotted;*/
+}
+
+.img_komtakts{
+    position: relative;
+    margin-top: 5px;
+    
+}
+
+
+                                             /*Для реєстрації*/
+/*------------------------------------------------------------------------------------------------------------*/
+.css-block{
+    margin-top: 10px;
+    
+    padding-left: 15px; 
+    
+    padding-right: 15px;
+    
+    
+    width: 980px;
+    
+    background: #F0FFFF;
+    padding-top: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#form1 .css-submit_registration{
+    margin-left: 300px;
+    margin-top: 20px;
+    width: 300px;
+    height: 35px;
+    
+}
+
+
+#form1 .css-submit_registration:hover{
+    background-color:aquamarine;
+}
+
+.css-form1 {
+    margin-top: 20px;
+    margin-left: 60px;
+    position: static;
+    
+    width: 850px;
+
+}
+
+#golovna #block #messageBox{
+    margin-left: 200px;
+    font-size: 24px;
+    font-family: Times New Roman;
+    color: orangered;
+}
+#form1 #login, #new_password1, #new_password2, #name{
+    width:850px;
+    height: 30px;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/*Для реєстрації*/
+/*--------------------------------------------------------------*/
+#golovna .auth_frame #messageBox{
+    
+    font-size: 18px;
+    font-family: Times New Roman;
+    color: orangered;
+}
+
+/*----------------------------------------------------------------------*/
+
+/*----------------------Для переходу в artickle.php-----------------------------------------*/
+#golovna #news #text #main_news a:hover{
+    cursor: pointer;
+   text-decoration: underline; 
+}
+
+#golovna #news #text a:hover{
+     cursor: pointer;
+   text-decoration: underline; 
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+
+/*Pagination*/
+/*-------------------------------------------------------------*/
+
+#page{
+    position: static;
+    height: 40px;
+    width: 800px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+#page #pagination{
+    color: black;
+    position :  static;
+    font-size: 18px;
+    font-weight: bold;
+    background-color:#C3FFFF;
+    padding: 8px 10px;
+    border: 1px solid black;
+    border-radius: 5px 5px 5px 5px;
+    margin-right: 10px;
+}
+
+#page #pagination:hover{
+     background-color:#5AFFE6;
+}
+
+/*
+#page table{
+    border-radius: 5px 5px  5px  5px ;
+    background-color: #82E7FF;
+    border-collapse: collapse;
+    
+}
+#page table tr td{
+    font-size:20px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#page table tr td:hover{
+    background-color: #E4FFFF;
+}
+*/
+
+
+/*oblik.php*/
+/*---------------------------------------------------------------------------------*/
+
+div form #change_admin_image, div div #change{
+    width: 150px;
+    margin-left: 50px;
+    margin-top: 10px;
+    background-color:#73C9FF; 
+    border-radius: 10px;
+}
+ #oblik_error{
+     position: relative;
+     color: red;
+     font-size: 25px;
+/*     margin-left: 400px;*/
+     text-align: center;
+     margin-top: 10px;
+    
+}
+div input[type="text"], div #name ,div #password_old, div #password_new{
+    margin-bottom: 25px;
+    height: 25px;
+    font-size: 14px;
+    width: 300px;
+    
+}
+div div label{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+/*---------------------------------------------------------------------------------*/
+
+
+/*admin_tools*/
+/*-----------------------------------------------------------*/
+#set_new{
+    width: 300px;
+    background-color: #73C9FF;
+    color: black;
+    font-size: 16px;
+    margin-left: 350px;
+    margin-top: 15px;
+}
+
+#set_new:hover{
+    background-color: #C3EDFF;
+    font-size: 17px;
+   
+}
+
+/*-----------------------------------------------------------*/
+/* admin_block*/
+/*----------------------------------------------------------------------------------*/
+#admin_block{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 15px;
+    font-size: 17px; 
+}
+
+#admin_block:hover{
+   text-decoration: underline;
+    color:darksalmon;
+}
+/*----------------------------------------------------------------------------------*/
+
+/*comments*/
+/*-----------------------------------------------------------------------------------------------*/
+#comment_style{
+    margin-top: 25px;
+    border: 1px solid grey;
+    background-color:floralwhite;
+   border-radius: 15px;
+    padding: 25px;
+}
+
+#comment_one{
+    background-color:#FFE1DC;
+    position: static;
+    border: 1px solid grey;
+    margin: 15px;
+    border-radius: 15px;
+}
+
+#comment_avatar{
+    position: static;
+    width: 90px; 
+    height: 90px;  
+    display: block; 
+    border-radius: 50px;
+    margin: 10px;
+}
+
+#comment_username{
+    position: absolute;
+    margin-left: 110px;
+    margin-top: -90px;
+    font-size: 18px;
+    color:red;
+}
+
+#comment_date{
+    position: absolute;
+   margin-left: 740px;
+    margin-top: -90px;
+    color: grey;
+}
+
+#comment_content{
+   position: static;
+    text-indent: 70px;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: -30px;
+    margin-bottom: 15px;
+/*    border: 1px solid black;*/
+   width: 830px;
+    
+}
+
+
+#comment_submit_style, #comment_submit_style2{
+    width: 100px;
+    margin-top: 25px;
+    font-size: 15px;
+   
+}
+
+#comment_submit_style:hover, #comment_submit_style2:hover{
+    background-color: #C3EDFF;
+    font-size: 16px;
+}
+
+#comment_change{
+    color: grey;
+     margin-left: 15px;   
+}
+
+#golovna #new #comment_style #comment_one div #comment_change:hover{
+    cursor: pointer;
+   text-decoration: underline;
+}
+#comment_change_submit{
+    position: absolute;  
+    margin-left: -670px; 
+    margin-top: 130px;
+    color: black;
+    font-size: 16px;
+    width: 150px;
+    border-radius: 10px;
+    
+}
+#golovna #new #comment_style #comment_one  #comment_content form  #comment_change_submit:hover{
+    background-color: #C3EDFF;
+    font-size: 17px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+
+/*edit_news*/
+/*-----------------------------------------------------------------------*/
+img.edit_news{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-left: 50%;
+
+  
+}
+
+#golovna #new div .edit_news:hover {
+      cursor:pointer;
+     opacity: 0.5;
+}
+
+.edit_news2{
+    position: absolute;
+    margin-left: 47%;
+    margin-top: 30px;
+    display: block;
+	opacity: 0;
+	transition: 0.5s opacity;
+}
+
+
+ div.aaa:hover .edit_news2{
+    opacity: 1;
+
+       
+}
+
+.edit_news2 li{
+    background-color: #00ccff;
+    border: 1px solid grey;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.edit_news2 li:hover{
+    background-color: #C1F8FF;
+    cursor: pointer;
+}
+/*-----------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/*Ліцензії та сертифікати*/
+/*----------------------------------------------------------*/
+#licence_title:hover{
+    text-decoration: underline;
+    color:darksalmon;
+}
+
+#licence_see_full{
+    position: relative;
+    color: red;
+    font-size:  22px;
+   margin-left: 400px;
+    
+    
+
+}
+#licence_see_full:hover{
+     text-decoration: underline;
+    color:darksalmon;
+}
+/*----------------------------------------------------------------------------*/
+
+/*Profession*/
+/*--------------------------------------------------------------------------------*/
+#golovna #news table {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    margin-left: 30px;
+    
+   
+}
+#golovna #news table td{
+    border-bottom: 1px solid black;
+     border-right: 1px solid black;
+     
+}
+
+#golovna #news table tr td{
+     font-size: 20px;
+}
+/*--------------------------------------------------------------------------------*/
+
+
+/*photo_gallery*/
+/*-------------------------------------------------------------------------------------------------------------*/
+img#photo_gallery{
+    position: relative;
+    width: 283px;
+    height: 260px;
+    margin: 15px;
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
+/*site_map*/
+/*----------------------------------------------------------------------------*/
+ul.map1{
+    margin-left: 25px;
+}
+
+ul.map2{
+    font-size: 19px;
+    list-style: circle;
+    margin-left: 50px;
+    margin-bottom: 25px;
+ 
+}
+
+ul.map2 li{
+       margin-bottom: 7px;
+}
+ul.map3{
+    margin-top: 10px;
+    list-style: circle;
+    margin-left: 75px;
+    margin-top: 10px;
+}
+
+ul.map3 li{
+    margin-bottom: 7px;
+}
+/*----------------------------------------------------------------------------*/
+
+/*widget_a*/
+/*--------------------------------------------------------------------------------------*/
+#golovna #news a #widget_a:hover{
+    border: 2px solid grey;
+   
+    
+}
+/*--------------------------------------------------------------------------------------*/

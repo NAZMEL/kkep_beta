@@ -1,0 +1,127 @@
+#css-golovna{
+    display: block;
+    position: static;
+	border-style: ridge;
+    background: #E0FFFF;
+	width: 1300px;
+	
+    padding: 15px;
+	
+	margin-left: 250px;      /*відступ від межі екрана з-ліва*/
+	margin-top: 75px;
+   
+}
+
+#form1 {
+    margin-top: 20px;
+    margin-left: 10px;
+    position: static;
+    
+    width: 850px;
+    height: 500px;
+}
+
+#css-block{
+    margin-top: 10px;
+    
+    padding-left: 15px; 
+    
+    padding-right: 15px;
+    
+    height: 880px;
+    width: 980px;
+    
+    background: #F0FFFF;
+    padding-top: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#form2{
+    width:850px;
+    height: 25px;   
+}
+
+label:hover{
+    cursor: text;
+}
+
+.css-submit_registration{
+    margin-left: 300px;
+    margin-top: 20px;
+    width: 200px;
+    height: 35px;
+    
+}
+
+.css-submit_registration:hover{
+    background-color:aquamarine;
+}
+
+
+<?php
+    if(isset($_POST["submit_registration"])){
+    
+    $errors=array();
+        
+    //if(!isset($_POST["login"]) || !isset($_POST["new_password1"]) || !isset($_POST["new_password2"]) || !isset($_POST["name"]))
+        //echo("Error1");
+        
+    if(!isset($_POST["login"]))
+    {
+        $errors[] = "Введіть адресу електронної пошти";
+    }
+    
+    if(!isset($_POST["new_password1"])){
+        $errors[] = "Введіть пароль";
+    }
+       
+    if(!isset($_POST["new_password2"])){
+        $errors[] = "Повторіть введений пароль";
+    }
+       
+    if(!isset($_POST["name"]))
+       {
+           $errors[] = "Введіть своє ім\'я";
+       }
+    
+        $unique = $mysqli->query("SELECT count(*) FROM `Users` WHERE `Login` = '".$_POST["login"]."' ");
+        if($unique > 0)
+        {
+            $errors[]= "Користувач із даною електронною поштою вже існує";  
+        }
+        if(md5($_POST["new_password1"]) != md5($_POST["new_password2"]) and !empty($_POST["new_password1"]))
+        {
+            $errors[] = "Перевірте правильність написання пароля";
+        }
+       
+        
+            if(isset($_POST["surname"])){
+                 $mysqli->query("INSERT INTO `users` (`Username`, `Surname`, `Login`, `Password` , `Reg_date`) VALUES ('".$_POST["name"]."', '".$_POST["surname"]."' , '".$_POST["login"]."', '".md5($_POST["new_password1"])."', CURRENT_TIMESTAMP)");
+            }
+            
+            else{
+                $mysqli->query("INSERT INTO `users` (`Username`, `Login`, `Password` , `Reg_date`) VALUES ('".$_POST["name"]."', '".$_POST["login"]."', '".md5($_POST["new_password1"])."', CURRENT_TIMESTAMP)");
+            }
+            
+        
+    if(!empty($errors)){
+        $shift = array_shift($errors);
+        ?>
+        <script>alert(.$shift.)</script>
+        <?php
+    }
+        
+    $mysqli->close();
+    //header("Location: ../index.php");
+/*
+    $message = "Hello everyone";
+    $mail = "melnyknasar@gmail.com";
+    $subject = "Subject";
+    $header= "From: melyknasar@gmail.com \r\nReply-To: $mail\r\nContent-type: text/plain; charset=utf-8\r\n" ;
+
+    mail($mail, $subject, $message, $header);
+        
+        
+        
+    }
+?>
