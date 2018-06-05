@@ -1,5 +1,7 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "admin", "kkepit"); //підключитись до бази даних
+require_once($_SERVER['DOCUMENT_ROOT']."/templates/includes/database.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/templates/includes/config.php");
+//$mysqli = new mysqli("localhost", "root", "admin", "kkepit"); //підключитись до бази даних
 
     $name = htmlspecialchars(mysqli_real_escape_string($mysqli,$_POST['name'])); // щоб теги html не  зашкодили даним
 //    $surname = htmlspecialchars(mysqli_real_escape_string($mysqli,$_POST['surname']));

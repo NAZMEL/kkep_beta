@@ -1,19 +1,19 @@
 <?php
 session_start();
-require_once "includes/database.php";
+require_once($_SERVER['DOCUMENT_ROOT']."/templates/includes/database.php");
     $title = "ККЕПІТ ІФНТУНГ";
-    include_once "templates/header.php";
-    require_once "includes/config.php"; 
-    include_once "templates/main_menu.php";
+    include_once($_SERVER['DOCUMENT_ROOT']."/templates/main_content/header.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/templates/includes/config.php"); 
+    include_once($_SERVER['DOCUMENT_ROOT']."/templates/main_content/main_menu.php");
 ?>
 <div id="golovna" >
 <!-- Авторизація та реєстрація -->
 <?php
-    include_once "templates/left.php";
+    include_once($_SERVER['DOCUMENT_ROOT']."/templates/main_content/left.php");
 ?>
     <!-- Головний фрейм -->
 <?php
-    require "templates/main_images.php";
+    require($_SERVER['DOCUMENT_ROOT']."/templates/main_content/main_images.php");
     //print_r($news[0]['author']); 
 ?>   
     <!-- Блок новин -->  
@@ -39,21 +39,19 @@ require_once "includes/database.php";
     {?>
 
         <div id= "news" >
-           <img src="/images/user.png" title="Автор новини" alt="Автор новини" style=" position: absolute; width: 15px; height: 15px; margin-top: 3px;"/>
+           <img src="images/user.png" title="Автор новини" alt="Автор новини" style=" position: absolute; width: 15px; height: 15px; margin-top: 3px;"/>
             <span style="color:grey; margin-left: 20px;"><?= $news[$i]['author']; ?></span>
             
-            <span  id="Date" title="Опубліковано" ><?= $news[$i]['date'];?><img src="images/Datetime.png" title="Час публікації" alt="Час публікації" style=" position: absolute; width: 25px; height: 25px;  margin-top: -3px;"/></span>
+            <span  id="Date" title="Опубліковано" ><?= $news[$i]['date'];?><img src="/images/Datetime.png" title="Час публікації" alt="Час публікації" style=" position: absolute; width: 25px; height: 25px;  margin-top: -3px;"/></span>
             <hr style="color: grey; margin-top: 5px; border-style: dashed;"/>
             
             <div id ="text" style="postion: relative; width: 980px;  ">
                     
-                    <a style="text-align: center;  color: #F07676;" href="/artickle.php?id=<?=$news[$i]['id'];?>"> <h2><?= $news[$i]['title'];?> </h2></a>
+                    <a style="text-align: center;  color: #F07676;" href="/templates/main_content/artickle.php?id=<?=$news[$i]['id'];?>"> <h2><?= $news[$i]['title'];?> </h2></a>
                 <?php
                     if(get_image_news($news[$i]['id'])){
                     ?>
-                    
-<!--                    <img src="news/images/<?= get_image_news($news[$i]['id']);?>" alt="Зображення" width="320px" height="350px" style="margin-left: 305px; border: outset;">  -->
-                     
+                                 
                     <a href="news/images/<?= get_image_news($news[$i]['id']);?>" class="highslide" 
 			 onclick="return hs.expand(this)"><img  src="news/images/<?= get_image_news($news[$i]['id']);?>" style=" position: relative; width: 320px; height: 350px; margin: 15px; margin-left: 305px;" /></a> 
                       <?php 
@@ -61,7 +59,7 @@ require_once "includes/database.php";
      if($news[$i]['full_text'] != ""){
          ?>
      
-                    <div id="main_news" style="margin-left: 10px; font-size: 21px;line-height:25px; text-indent: 1cm; "><?=substr($news[$i]['full_text'], 0, 3000).'...';?><a style="color: grey; font-style: italic;" href="/artickle.php?id=<?= $news[$i]['id']?>"> читати далі.</a></div> 
+                    <div id="main_news" style="margin-left: 10px; font-size: 21px;line-height:25px; text-indent: 1cm; "><?=substr($news[$i]['full_text'], 0, 3000).'...';?><a style="color: grey; font-style: italic;" href="/templates/main_content/artickle.php"/artickle.php?id=<?= $news[$i]['id']?>"> читати далі.</a></div> 
                     
                <?php
      }
@@ -161,31 +159,27 @@ require_once "includes/database.php";
  <script>
         
            $(document).ready(function(){
-//               $('#like').click(function(){
-//            var id_new = <?php echo $news[$i]['id']?>;
                function a(id_new){
             var id_user = <?php echo $_SESSION['id']?>;
-                   $.post('/templates/likes.php', {id_new: id_new, id_user: id_user}, function(data){
+                   $.post('/templates/scripts/likes.php', {id_new: id_new, id_user: id_user}, function(data){
                        data = JSON.parse(data);
                        $('#count_likes').html(data['like']);
                        $('#like').attr("src",data['src'] );
                    });
-               }
-    //      });                                 
+               }                         
     });
                  
 </script>
- 
    </div>
    <?php
     }
     ?>
     <?php
-    include_once("templates/widget_a.php");
+    include_once("templates/main_content/widget_a.php");
     ?>
    </div>    
 <?php
-    require "templates/footer.php";
+    require "templates/main_content/footer.php";
 ?>    
 
 
